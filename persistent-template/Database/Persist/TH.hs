@@ -772,7 +772,7 @@ mkKeyTypeDec mps t = do
                then do pfDec <- pfInstD
                        return (pfDec, [''Show, ''Read, ''Eq, ''Ord, ''Generic])
                 else do
-                    let allInstances = [''Show, ''Read, ''Eq, ''Ord, ''PathPiece, ''ToHttpApiData, ''FromHttpApiData, ''PersistField, ''PersistFieldSql, ''ToJSON, ''FromJSON]
+                    let allInstances = [''Show, ''Read, ''Eq, ''Ord, ''PathPiece, ''ToHttpApiData, ''FromHttpApiData, ''PersistField, ''PersistFieldSql, ''ToJSON, ''FromJSON, ''Generic]
                     if customKeyType
                       then return ([], allInstances)
                       else do
